@@ -1,0 +1,26 @@
+<div class="calculator">
+    <div class="calculations">
+        <div class="computation">{{text}}</div>
+        <div class="result">{{calculate text}}</div>
+    </div>
+    <div class="clear-button" {{action "clear"}}>Clear</div>
+    <div class="operators">
+        {{calculator-button class="button operator" value=" + " update=(action "update")}}
+        {{calculator-button class="button operator" value=" − " update=(action "update")}}
+        {{calculator-button class="button operator" value=" × " update=(action "update")}}
+        {{calculator-button class="button operator" value=" ÷ " update=(action "update")}}
+    </div>
+    <div class="numbers">
+        {{calculator-button class="button number" value="7" update=(action "update")}}
+        {{calculator-button class="button number" value="8" update=(action "update")}}
+        {{calculator-button class="button number" value="9" update=(action "update")}}
+        {{calculator-button class="button number" value="4" update=(action "update")}}
+        {{calculator-button class="button number" value="5" update=(action "update")}}
+        {{calculator-button class="button number" value="6" update=(action "update")}}
+        {{calculator-button class="button number" value="1" update=(action "update")}}
+        {{calculator-button class="button number" value="2" update=(action "update")}}
+        {{calculator-button class="button number" value="3" update=(action "update")}}
+        {{calculator-button class="button number" value="0" update=(action "update")}}
+        {{calculator-button class="button number" value="." update=(action "update")}}
+    </div>
+</div>
