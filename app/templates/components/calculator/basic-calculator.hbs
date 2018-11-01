@@ -1,0 +1,43 @@
+<div class="calculator-card">
+  {{#paper-card as |card|}}
+    {{#card.header as |header|}}
+      {{#header.text as |text|}}
+        {{#text.title}}Ember Basic Calculator{{/text.title}}
+        {{#text.subhead}}{{themes.current.attributes.name}} Theme{{/text.subhead}}
+      {{/header.text}}
+    {{/card.header}}
+    {{#card.content}}
+      <div class="calculator {{themes.current.attributes.class-name}}">
+        <div class="calculations">
+          <div class="computation">{{text}}</div>
+          <div class="result">{{calculate text}}</div>
+        </div>
+        <div class="buttons">
+          <div class="operators">
+            {{calculator/calculator-button value=" + " update=(action "update")}}
+            {{calculator/calculator-button value=" − " update=(action "update")}}
+            {{calculator/calculator-button value=" × " update=(action "update")}}
+            {{calculator/calculator-button value=" ÷ " update=(action "update")}}
+          </div>
+          <div class="numbers">
+            {{calculator/calculator-button value="7" update=(action "update")}}
+            {{calculator/calculator-button value="8" update=(action "update")}}
+            {{calculator/calculator-button value="9" update=(action "update")}}
+            {{calculator/calculator-button value="4" update=(action "update")}}
+            {{calculator/calculator-button value="5" update=(action "update")}}
+            {{calculator/calculator-button value="6" update=(action "update")}}
+            {{calculator/calculator-button value="1" update=(action "update")}}
+            {{calculator/calculator-button value="2" update=(action "update")}}
+            {{calculator/calculator-button value="3" update=(action "update")}}
+            {{calculator/calculator-button value="0" update=(action "update")}}
+            {{calculator/calculator-button value="." update=(action "update")}}
+            {{#paper-button raised=true primary=true onClick=(action "clear")}}Clear{{/paper-button}}
+          </div>
+        </div>
+      </div>
+    {{/card.content}}
+    {{#card.actions}}
+      {{#paper-button onClick=(action "changeTheme")}}{{paper-icon "format_color_fill"}} Change Theme{{/paper-button}}
+    {{/card.actions}}
+  {{/paper-card}}
+</div>

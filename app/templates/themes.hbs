@@ -1,0 +1,18 @@
+<div class="themes-card">
+  {{#paper-card as |card|}}
+    {{#card.header as |header|}}
+      {{#header.avatar}}
+        {{paper-icon "format_color_fill"}}
+      {{/header.avatar}}
+      {{#header.text as |text|}}
+        {{#text.title}}Themes{{/text.title}}
+        {{#text.subhead}}Change the theme{{/text.subhead}}
+      {{/header.text}}
+    {{/card.header}}
+    {{#card.content}}
+      {{#each themes as |theme|}}
+        {{themes/theme-button theme=theme}}
+      {{/each}}
+    {{/card.content}}
+  {{/paper-card}}
+</div>
