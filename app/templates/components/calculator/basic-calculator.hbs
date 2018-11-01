@@ -9,35 +9,51 @@
     {{#card.content}}
       <div class="calculator {{themes.current.attributes.class-name}}">
         <div class="calculations">
-          <div class="computation">{{text}}</div>
-          <div class="result">{{calculate text}}</div>
+          <div class="operation">{{operation}}</div>
+          <div class="result">{{result}}</div>
         </div>
         <div class="buttons">
           <div class="operators">
-            {{calculator/calculator-button value=" + " update=(action "update")}}
-            {{calculator/calculator-button value=" − " update=(action "update")}}
-            {{calculator/calculator-button value=" × " update=(action "update")}}
-            {{calculator/calculator-button value=" ÷ " update=(action "update")}}
+            {{calculator/calculator-button
+              value=operators.ADD 
+              action=(action "update")
+            }}
+            {{calculator/calculator-button
+              value=operators.SUBTRACT 
+              action=(action "update")
+            }}
+            {{calculator/calculator-button
+              value=operators.MULTIPLY 
+              action=(action "update")
+            }}
+            {{calculator/calculator-button
+              value=operators.DIVIDE 
+              action=(action "update")
+            }}
           </div>
           <div class="numbers">
-            {{calculator/calculator-button value="7" update=(action "update")}}
-            {{calculator/calculator-button value="8" update=(action "update")}}
-            {{calculator/calculator-button value="9" update=(action "update")}}
-            {{calculator/calculator-button value="4" update=(action "update")}}
-            {{calculator/calculator-button value="5" update=(action "update")}}
-            {{calculator/calculator-button value="6" update=(action "update")}}
-            {{calculator/calculator-button value="1" update=(action "update")}}
-            {{calculator/calculator-button value="2" update=(action "update")}}
-            {{calculator/calculator-button value="3" update=(action "update")}}
-            {{calculator/calculator-button value="0" update=(action "update")}}
-            {{calculator/calculator-button value="." update=(action "update")}}
-            {{#paper-button raised=true primary=true onClick=(action "clear")}}Clear{{/paper-button}}
+            {{calculator/calculator-button value="7" action=(action "update")}}
+            {{calculator/calculator-button value="8" action=(action "update")}}
+            {{calculator/calculator-button value="9" action=(action "update")}}
+            {{calculator/calculator-button value="4" action=(action "update")}}
+            {{calculator/calculator-button value="5" action=(action "update")}}
+            {{calculator/calculator-button value="6" action=(action "update")}}
+            {{calculator/calculator-button value="1" action=(action "update")}}
+            {{calculator/calculator-button value="2" action=(action "update")}}
+            {{calculator/calculator-button value="3" action=(action "update")}}
+            {{calculator/calculator-button value="0" action=(action "update")}}
+            {{calculator/calculator-button value="." action=(action "update")}}
+          </div>
+          <div class="actions">
+            {{calculator/calculator-button value="Back" action=(action "back")}}
+            {{calculator/calculator-button value="Clear" action=(action "clear")}}
+            {{calculator/calculator-button value="Calculate" action=(action "calculate")}}
           </div>
         </div>
       </div>
     {{/card.content}}
     {{#card.actions}}
-      {{#paper-button onClick=(action "changeTheme")}}{{paper-icon "format_color_fill"}} Change Theme{{/paper-button}}
+      {{#paper-button onClick=(action "routeToThemes")}}{{paper-icon "format_color_fill"}} Change Theme{{/paper-button}}
     {{/card.actions}}
   {{/paper-card}}
 </div>

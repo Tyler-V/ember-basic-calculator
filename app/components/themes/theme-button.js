@@ -6,6 +6,7 @@ import {
 export default Component.extend({
   router: service(),
   themes: service(),
+
   actions: {
     changeTheme() {
       this.themes.change(this.get('theme'));

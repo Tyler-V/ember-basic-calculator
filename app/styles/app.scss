@@ -23,7 +23,7 @@ body {
     }
 
     &.dark {
-      background: linear-gradient(to right, #434343, #000000);
+      background: linear-gradient(to right, #414345, #232526);
       color: #FFF;
 
       .calculations {
@@ -46,29 +46,29 @@ body {
   }
 
   .calculations {
-    height: 50px;
-    padding: 10px;
+    height: 60px;
+    padding: 10px 10px 5px 10px;
     text-align: right;
 
-    .computation {
+    .operation {
       height: 20px;
       line-height: 20px;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .result {
-      height: 30px;
-      line-height: 30px;
-      font-size: 28px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 30px;
     }
   }
-
 
   .buttons {
     padding: 5px;
 
     .operators,
-    .numbers {
+    .numbers,
+    .actions {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -88,6 +88,12 @@ body {
     .numbers {
       div {
         flex: calc(100% / 3);
+      }
+    }
+
+    .actions {
+      div {
+        flex: 1;
       }
     }
 
