@@ -48,7 +48,7 @@ export function calculate([text]) {
     text = calculate(text, `${ADD}|${SUBTRACT}`);
   }
 
-  return parseFloat(text);
+  return Number(parseFloat(text).toFixed(10)).toString();
 }
 
 export default helper(calculate);

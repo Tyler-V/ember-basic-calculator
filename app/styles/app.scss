@@ -5,7 +5,6 @@ body {
 }
 
 .calculator-card {
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -13,26 +12,34 @@ body {
   width: 100%;
   max-width: 450px;
 
-
   .calculator {
     &.light {
-      background-color: #FFF;
+      background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
       color: #000;
+
+      .calculations {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      }
     }
 
     &.dark {
-      background-color: #000;
+      background: linear-gradient(to right, #434343, #000000);
       color: #FFF;
+
+      .calculations {
+        border-bottom: 2px solid #FFF;
+      }
     }
 
     &.colors {
-      background: #1E9600;
-      background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);
-      background: linear-gradient(to right, #FF0000, #FFF200, #1E9600);
+      background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
       color: #FFF;
+
+      .calculations {
+        border-bottom: 2px solid #FFF;
+      }
     }
 
-    width: 100%;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -41,18 +48,17 @@ body {
   .calculations {
     height: 50px;
     padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     text-align: right;
 
     .computation {
-      height: 50%;
-      line-height: 25px;
+      height: 20px;
+      line-height: 20px;
       font-size: 14px;
     }
 
     .result {
-      height: 50%;
-      line-height: 25px;
+      height: 30px;
+      line-height: 30px;
       font-size: 28px;
     }
   }
